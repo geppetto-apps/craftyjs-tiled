@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="4" height="4" tilewidth="256" tileheight="128" nextobjectid="1">
+ <tileset firstgid="1" name="TilesetPack - Grass" tilewidth="256" tileheight="158" tilecount="49" columns="7">
+  <image source="../../../../private/Migration/TilesetPack - Grass.png" width="1792" height="1106"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="4" height="4">
+  <data encoding="csv">
+1,1,1,1,
+6,6,7,1,
+1,7,6,1,
+1,1,1,1
+</data>
+ </layer>
+</map>

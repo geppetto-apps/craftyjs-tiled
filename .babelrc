@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "transform-flow-strip-types",
+    "transform-class-properties",
+    "transform-async-to-generator"
+  ],
+  "presets": [
+    "es2015"
+  ]
+}
