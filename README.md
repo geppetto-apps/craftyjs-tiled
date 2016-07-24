@@ -1,3 +1,5 @@
+[![Codeship](https://img.shields.io/codeship/aff896a0-33c7-0134-d156-02ce05b9fb1b.svg?maxAge=2592000)](https://codeship.com/projects/aff896a0-33c7-0134-d156-02ce05b9fb1b/status?branch=master)
+
 # Crafty Tiled
 
 Crafty Tiled is an addon for the Crafty.js game engine.
