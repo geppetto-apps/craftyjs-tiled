@@ -6,7 +6,7 @@ The project goal is to support as many features from Tiled as possible.
 
 ## Installation
 
-```
+```sh
 npm i crafty-tiled --save
 # or
 bower install crafty-tiled --save
@@ -14,7 +14,7 @@ bower install crafty-tiled --save
 
 ## Usage
 
-```
+```javascript
 import 'craftyjs-tiled';
 
 Crafty.tiled.render('/map.tmx').then(function() {
@@ -24,19 +24,17 @@ Crafty.tiled.render('/map.tmx').then(function() {
 });
 ```
 
-Play online: http://holy-grail-game.io/
-
 ## Contributing
 
 See the [CONTRIBUTING] document.
 Thank you, [contributors]!
 
   [CONTRIBUTING]: CONTRIBUTING.md
-  [contributors]: https://github.com/geppetto-apps/holy-grail/graphs/contributors
+  [contributors]: https://github.com/geppetto-apps/craftyjs-tiled/graphs/contributors
 
 ## License
 
-Holy Grail is Copyright (c) 2016 Theodor Tonum
+Crafty Tiled is Copyright (c) 2016 Theodor Tonum
 It is free software, and may be redistributed
 under the terms specified in the [LICENSE] file.
 
@@ -44,4 +42,4 @@ under the terms specified in the [LICENSE] file.
 
 ## About
 
-Holy Grail is maintained by Theodor Tonum.
+Crafty Tiled is maintained by Theodor Tonum.
