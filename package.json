@@ -30,7 +30,7 @@
     "jest-cli": "^13.2.3"
   },
   "dependencies": {
-    "tmx-parser": "^1.4.0"
+    "tmx-parser": "git+git@github.com:geppetto-apps/node-tmx-parser.git#fix-object-property-types"
   },
   "jspm": {
     "name": "craftyjs-tiled",

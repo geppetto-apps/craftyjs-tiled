@@ -7,7 +7,11 @@ type TileDefinitionType = {
 
 export type TilesetType = {
   firstGid: number;
-  image: Object;
+  image: {
+    height: number;
+    width: number;
+    source: string;
+  };
   margin: ?number;
   name: ?string;
   properties: Object;
