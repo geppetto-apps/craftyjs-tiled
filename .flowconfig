@@ -1,4 +1,6 @@
 [ignore]
+<PROJECT_ROOT>/jspm_packages
+<PROJECT_ROOT>/node_modules/jspm/.*
 
 [include]
 
