@@ -3,7 +3,6 @@ module.exports = {
     "extends": "airbnb",
     "plugins": [
         "flow-vars",
-        "react",
         "flowtype"
     ],
     "env": {
@@ -11,6 +10,7 @@ module.exports = {
         jest: true
     },
     "rules": {
+        "react/jsx-no-bind": 0,
         "flow-vars/define-flow-type": 2,
         "flow-vars/use-flow-type": 2,
         "flowtype/require-parameter-type": 0,

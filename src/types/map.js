@@ -5,6 +5,10 @@ import type { TilesetType } from './tileset';
 export type MapType = {
   layers: Array<LayerType>;
   tileSets: Array<TilesetType>;
+  tileWidth: number;
+  tileHeight: number;
+  width: number;
+  height: number;
 }
 
 
