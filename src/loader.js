@@ -1,6 +1,5 @@
 /* @flow */
 /* global Crafty */
-import 'craftyjs/dist/crafty.js'; // TODO: Fix this ugliness
 import tmx from 'tmx-parser';
 import spriteNameFromGid from './util/sprite-name-from-gid';
 
