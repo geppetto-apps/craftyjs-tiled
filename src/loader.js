@@ -44,15 +44,17 @@ export default class Loader {
 
   loadSprites(map: MapType) {
     map.tileSets.forEach((tileset) => {
-      const { tiles, tileWidth, tileHeight, image: { source, width } } = tileset;
+      const { tileWidth, tileHeight, image: { source, width, height } } = tileset;
       const columns = width / tileWidth;
+      const rows = height / tileHeight;
       const spriteMap = {};
-      tiles.forEach((tile, index) => {
+      for (let index = 0; index < columns * rows; index++) {
+        const gid = tileset.firstGid + index;
         const column = index % columns;
         const row = Math.floor(index / columns);
-        const key = spriteNameFromGid(tile.gid);
+        const key = spriteNameFromGid(gid);
         spriteMap[key] = [column, row];
-      });
+      }
       Crafty.sprite(tileWidth, tileHeight, source, spriteMap);
     });
   }
