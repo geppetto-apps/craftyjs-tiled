@@ -10,16 +10,7 @@ function isCanvasSupported(): boolean {
   return !!(elem.getContext && elem.getContext('2d'));
 }
 
-type Vector2dType = {
-  x: number;
-  y: number;
-}
-
-type Vector2dMutableType = Vector2dType | {
-  multiply(vec: Vector2dType): Vector2dMutableType;
-  scale(scalar: number): Vector2dMutableType;
-  add(vec: Vector2dType): Vector2dMutableType;
-}
+type Vector2D = Crafty.math.Vector2D;
 
 type TmxObjectType = {
   name: string;
@@ -39,8 +30,8 @@ type TmxObjectType = {
 
 export default class Renderer {
   map: MapType;
-  tileSize: Vector2dType;
-  origo: Vector2dType;
+  tileSize: Vector2D;
+  origo: Vector2D;
 
   constructor(map: MapType) {
     const { height, tileWidth, tileHeight } = map;
@@ -137,7 +128,7 @@ export default class Renderer {
   }
 
   // Converts a vector of small coordinates to screen coordinates
-  translateCoordinates(vector: Vector2dType): Vector2dType {
+  translateCoordinates(vector: { x: number, y: number }): Vector2D {
     const { x, y } = vector;
     const deltaX = x - y;
     const deltaY = x + y;
@@ -150,7 +141,7 @@ export default class Renderer {
 
   // Takes a vector of large coordinates (like [256, 128]) and
   // converts them to small coordinates (like [2, 1])
-  normalizeCoordinates(vector: Vector2dType): Vector2dType {
+  normalizeCoordinates(vector: { x: number, y: number }): Vector2D {
     const { x, y } = vector;
     return new Crafty.math.Vector2D(x, y).scale(1 / this.tileSize.y);
   }

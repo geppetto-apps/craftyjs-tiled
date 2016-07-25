@@ -29,10 +29,7 @@ module.exports = {
             2,
             "never"
         ],
-        "flowtype/type-id-match": [
-            2,
-            "^([A-Z][a-z0-9]+)+Type$"
-        ],
+        "flowtype/type-id-match": 0,
         "flowtype/require-valid-file-annotation": [
             2,
             "always"

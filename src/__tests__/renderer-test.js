@@ -12,7 +12,7 @@ jest.unmock('../util/sprite-name-from-gid');
 jest.unmock('../__fixtures__/map-1.tmx.js');
 jest.unmock('../__fixtures__/object-example.tmx.js');
 
-interface Component2D {
+declare class Component2D extends Entity {
   x: number;
   y: number;
   w: number;
@@ -102,7 +102,7 @@ describe('Renderer', () => {
 
     it('should size and place the entity correctly', () => {
       renderer.render();
-      const entity = Crafty('Tree 2D').get(0);
+      const entity: Component2D = Crafty('Tree 2D').get(0);
       expect(entity.x).toBe(512); // 2 tile widths
       expect(entity.y).toBe(448); // 3 tile height + padding
       expect(entity.w).toBe(256);
@@ -111,12 +111,13 @@ describe('Renderer', () => {
 
     it('should annotate for easier debugging', () => {
       renderer.render();
-      expect(Crafty('Tree').get(0)._entityName).toBe('This is a tree'); // eslint-disable-line
+      const entity: Entity = Crafty('Tree').get(0);
+      expect(entity._entityName).toBe('This is a tree'); // eslint-disable-line
     });
 
     it('should handle custom properties', () => {
       renderer.render();
-      const tree = Crafty('Tree').get(0);
+      const tree: Entity = Crafty('Tree').get(0);
       expect(tree.attr('color')).toBe('green');
       expect(tree.attr('growing')).toBe(true);
       expect(tree.attr('height')).toBe(2);
