@@ -3,7 +3,7 @@
 import Loader from './loader';
 import Renderer from './renderer';
 
-Crafty.tiled = {
+export default Crafty.tiled = {
   fetch() {},
   render(url: string): Promise<void> {
     const loader = new Loader();
