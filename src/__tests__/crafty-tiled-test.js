@@ -8,6 +8,10 @@ import 'craftyjs/dist/crafty.js'; // TODO: Fix this ugliness
 import '../craftyjs-tiled';
 
 jest.disableAutomock();
+jest.useRealTimers();
+
+Crafty.support.webgl = false;
+Crafty.support.canvas = false;
 
 function getCanvas(): HTMLCanvasElement {
   const canvas: ?HTMLCanvasElement = (document.querySelector('canvas'): any);

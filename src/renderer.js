@@ -5,10 +5,6 @@ import spriteNameFromGid from './util/sprite-name-from-gid';
 import type { MapType } from './types/map';
 import type { LayerType } from './types/layer';
 
-function isCanvasSupported(): boolean {
-  const elem = document.createElement('canvas');
-  return !!(elem.getContext && elem.getContext('2d'));
-}
 
 type Vector2D = Crafty.math.Vector2D;
 
@@ -117,7 +113,11 @@ export default class Renderer {
     });
 
     // TODO: Add some kind of test for this
-    if (isCanvasSupported()) componentList.push('Canvas');
+    if (Crafty.support.webgl) {
+      componentList.push('WebGL');
+    } else if (Crafty.support.canvas) {
+      componentList.push('Canvas');
+    }
 
     return Crafty.e(...componentList).attr({
       x: data.x,
