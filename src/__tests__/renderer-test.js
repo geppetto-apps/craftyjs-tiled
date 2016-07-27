@@ -19,6 +19,9 @@ declare class Component2D extends Entity {
   h: number,
 }
 
+Crafty.support.webgl = false;
+Crafty.support.canvas = false;
+
 describe('Renderer', () => {
   let renderer;
 

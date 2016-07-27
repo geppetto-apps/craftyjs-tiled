@@ -13,6 +13,11 @@ jest.unmock('../util/sprite-name-from-gid');
 jest.unmock('../__fixtures__/map-1.tmx.js');
 jest.unmock('tmx-parser');
 
+jest.useRealTimers();
+
+Crafty.support.webgl = false;
+Crafty.support.canvas = false;
+
 describe('Loader', () => {
   let loader;
 
