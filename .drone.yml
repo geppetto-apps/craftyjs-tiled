@@ -1,12 +1,14 @@
 build:
   image: node:4.4.7
+  environment:
+    - NPM_CONFIG_LOGLEVEL=warn
   commands:
     - apt-get -yqq update
     - apt-get -yqq install libelf-dev
-    - npm install jspm@beta
+    - npm install jspm@beta -g
     - npm install
-    - node_modules/.bin/jspm install
-    - npm test
+    - jspm install
+    - bin/test
 cache:
   mount:
     - jspm_packages
