@@ -1,4 +1,4 @@
-[![Codeship](https://img.shields.io/codeship/aff896a0-33c7-0134-d156-02ce05b9fb1b.svg?maxAge=2592000)](https://codeship.com/projects/aff896a0-33c7-0134-d156-02ce05b9fb1b/status?branch=master)
+[![Build Status](http://drone-9925e255.ci.e0c68077.svc.dockerapp.io:8000/api/badges/geppetto-apps/craftyjs-tiled/status.svg)](http://drone-9925e255.ci.e0c68077.svc.dockerapp.io:8000/geppetto-apps/craftyjs-tiled)
 
 # Crafty Tiled
 
