@@ -1,11 +1,16 @@
 build:
-  image: geppettoapps/node-flow-jspm:4.4.7
-  environment:
-    - NPM_CONFIG_LOGLEVEL=warn
-  commands:
-    - npm install
-    - jspm install
-    - bin/ci
+  test:
+    image: geppettoapps/node-jspm:4.4.7
+    environment:
+      - NPM_CONFIG_LOGLEVEL=warn
+    commands:
+      - npm install
+      - npm run lint
+      - npm test
+  flow:
+    image: rezzza/docker-flow:0.30.0
+    commands:
+      - flow
 cache:
   mount:
     - jspm_packages
