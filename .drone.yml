@@ -1,0 +1,13 @@
+build:
+  image: node:4.4.7
+  commands:
+    - apt-get -yqq update
+    - apt-get -yqq install libelf-dev
+    - npm install jspm@beta -g
+    - npm install
+    - jspm install
+    - npm test
+cache:
+  mount:
+    - jspm_packages
+    - node_modules
