@@ -1,14 +1,11 @@
 build:
-  image: node:4.4.7
+  image: geppettoapps/node-flow-jspm:4.4.7
   environment:
     - NPM_CONFIG_LOGLEVEL=warn
   commands:
-    - apt-get -yqq update
-    - apt-get -yqq install libelf-dev
-    - npm install jspm@beta -g
     - npm install
     - jspm install
-    - bin/test
+    - bin/ci
 cache:
   mount:
     - jspm_packages
