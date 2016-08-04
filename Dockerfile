@@ -24,4 +24,6 @@ RUN jspm install
 
 COPY . ./
 
+RUN bin/ci
+
 CMD ["bin/ci"]
